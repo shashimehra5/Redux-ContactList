@@ -10,7 +10,7 @@ import axios from 'axios'
 // With api response
 
 export const getContacts = () => async dispatch => {
-    const res = await axios.get('http://jsonplaceholder.typicode.com/users');
+    const res = await axios.get('https://jsonplaceholder.typicode.com/users');
     dispatch({
         type: GET_CONTACTS,
         payload: res.data
@@ -18,7 +18,7 @@ export const getContacts = () => async dispatch => {
 }
 
 export const getContact = id => async dispatch => {
-    const res = await axios.get(`http://jsonplaceholder.typicode.com/users/${id}`);
+    const res = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
     dispatch({
         type: GET_CONTACT,
         payload: res.data
@@ -36,7 +36,7 @@ export const getContact = id => async dispatch => {
 // with api
 
 export const deleteContact = id => async dispatch => {
-    await axios.delete(`http://jsonplaceholder.typicode.com/users/${id}`);
+    await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
 
     dispatch({
         type: DELETE_CONTACTS,
@@ -53,7 +53,7 @@ export const deleteContact = id => async dispatch => {
 
 // with apo
 export const addContact = contact => async dispatch=> {
-   const res = await axios.post('http://jsonplaceholder.typicode.com/users/', contact);
+   const res = await axios.post('https://jsonplaceholder.typicode.com/users/', contact);
     dispatch({
         type: ADD_CONTACTS,
         payload: res.data
@@ -61,7 +61,7 @@ export const addContact = contact => async dispatch=> {
 }
 
 export const editContact = id => async dispatch => {
-    await axios.put(`http://jsonplaceholder.typicode.com/users/${id}`);
+    await axios.put(`https://jsonplaceholder.typicode.com/users/${id}`);
 
     dispatch({
         type: EDIT_CONTACTS,
@@ -70,7 +70,7 @@ export const editContact = id => async dispatch => {
 }
 
 export const updateContact = contact => async dispatch=> {
-    const res = await axios.put(`http://jsonplaceholder.typicode.com/users/${contact.id}`, contact);
+    const res = await axios.put(`https://jsonplaceholder.typicode.com/users/${contact.id}`, contact);
      dispatch({
          type: UPDATE_CONTACTS,
          payload: res.data

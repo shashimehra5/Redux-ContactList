@@ -2,12 +2,13 @@
   "name": "contactmanager",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shashimehra5.github.io/Redux-ContactList",
+  "homepage": "https://shashimehra5.github.io/Redux-ContactList/",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.2",
     "classnames": "^2.2.6",
     "gh-pages": "^1.2.0",
+    "git": "^0.1.5",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
@@ -19,8 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build&&gh-pages -d build",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   }
 }
